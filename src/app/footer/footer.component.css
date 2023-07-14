@@ -1,0 +1,30 @@
+  /*-- copyright --*/
+  .colorlibcopy-agile {
+   
+    text-align: center;
+    background-color: black;
+  }
+  
+  .colorlibcopy-agile p {
+    font-size: .9em;
+    color: #fff;
+    line-height: 1.8em;
+    letter-spacing: 1px;
+    font-weight: 100;
+  }
+  
+  .colorlibcopy-agile p a {
+    color: #fff;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    text-decoration: none;
+  }
+  
+  .colorlibcopy-agile p a:hover {
+    color: rgb(238, 90, 90);
+  }
+  
+  /*-- //copyright --*/

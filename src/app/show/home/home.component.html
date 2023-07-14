@@ -1,0 +1,52 @@
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1687327413545_webbannernpa.jpg" class="d-block w-100" alt="ads">
+      </div>
+      <div class="carousel-item">
+        <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1688313856948_fastxdesktop.jpg" class="d-block w-100" alt="ads">
+      </div>
+  
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="recommended-movies">
+    <h1 class="ml-4 mt-4 fw-bolder">Recommended Movies</h1>
+
+    <!-- https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNmymteXnUYhdCqQOmJzw62ZQt7VLkTls-cqwVK2QiLgse86bO8HlqWUJKNW1BgsRYAks&usqp=CAU -->
+    <div class="cards">
+      <div class="row d-flex" >
+        <div class="col-lg-3 col-md-4 col-sm-6 card-column" *ngFor="let movie of movies let count=index;" > 
+          <div class="cardxc"   *ngIf="count<4" >
+            <img [src]=movie.posterUrl class="card-img-top" alt="movie poster">
+            <div class="card-body text-center"> 
+              <h3 class="card-title fw-bolder">{{movie.name}}</h3>
+              <p class="card-text">{{movie.releaseDate}}</p>
+              <a href="#" class="btn btn-dark rounded-pill">BOOK NOW</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="allMovies text-center mb-3" >
+      <a routerLink="/movies" class="allMoviesBtn btn btn-dark rounded-pill" >View all movies</a>
+    </div>
+    
+
+  </div>
+
+  

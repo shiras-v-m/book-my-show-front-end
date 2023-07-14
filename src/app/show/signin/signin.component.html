@@ -1,0 +1,40 @@
+<div class="main-layouts wrapper">
+    <h1>User Signin Form</h1>
+    <div class="main-agileinfo">
+        <div class="agileits-top">
+            <form [formGroup]="signinForm" (ngSubmit)="signin()">
+          
+                <input class="text email" formControlName="email" type="email" name="email" placeholder="Email" required>
+                <div class="mt-1 mb-2 text-danger" *ngIf="this.signinForm.get('email')?.errors && this.signinForm.get('email')?.touched ">
+                    Invalid email
+                  </div>
+                <input class="text" formControlName="pswd" type="password" name="pswd" placeholder="password" required>
+                <div class="mt-2 text-danger" *ngIf="this.signinForm.get('pswd')?.errors && this.signinForm.get('pswd')?.touched ">
+                    Invalid password
+                  </div>
+                
+                <div class="wthree-text">
+                   
+                    <div class="clear"> </div>
+                </div>
+                <input  type="submit" value="Login">
+            </form>
+            <p>Don't have an Account? <a routerLink="/signup"> SignUp Now!</a></p>
+        </div>
+    </div>
+    <!-- copyright -->
+ 
+    <!-- //copyright -->
+    <ul class="colorlib-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>

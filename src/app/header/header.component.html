@@ -1,0 +1,72 @@
+<nav>
+    <div class="row-top">
+      <a routerLink=""><img class="logo" src="/assets/logo.png" alt="logo"></a>
+      <!-- <input type="text" placeholder="Search for Movies, Events, Plays, Sports and Activities">   -->
+      <form class="example-form">
+        <input type="text"
+               placeholder="Search for movies"
+            
+               [matAutocomplete]="auto" [(ngModel)]="searchKey" name="searchKey"
+               class="example-input">
+        <mat-autocomplete #auto="matAutocomplete">
+          <!-- <mat-option *ngFor="let street of moviesArray " [value]="street.name"> -->
+            <mat-option *ngFor="let movie of moviesArray | filter:searchKey:'name'   ; let i=index" [value]="movie.name" >
+          {{movie.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </form>
+      <div class="right-section">
+        <!-- <div class="dropdown">
+          <button class="dropbtn">Kochi</button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div> -->
+          <button *ngIf="!loggedinUser" class="signin-btn"><a class="text-decoration-none text-white" routerLink="signin">Sign In</a></button>
+          <a routerLink="bookings" class="user-btn"  *ngIf="loggedinUser" for=""><i class="fa-regular fa-user" style="font-size: 20px;"></i></a>
+        <div class="navbar">
+          
+          <button class="navicon"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i  class="fa-solid fa-bars "></i></button>
+          
+          <!-- left side navigation links -->
+          <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header " style="background-color: black;width: 100%;">
+              <h5  class="offcanvas-title text-light" id="offcanvasScrollingLabel">Hey!</h5>
+              <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body text-center">
+              <p>Try scrolling the rest of the page to see this option in action.</p>
+              <div class="adminbox">
+                <a routerLink="/adminSignin" class="adminLink btn ">Admin</a>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+    </div>
+    <div class="row-bottom">
+      <div class="bottom-left-section">
+          <ul>
+            <li><a routerLink="/movies">Movies</a></li>
+            <li><a routerLink="">Stream</a></li>
+            <li><a routerLink="">Events</a></li>
+            <li><a routerLink="">Plays</a></li>
+            <li><a routerLink="">Sports</a></li>
+            <li><a routerLink="">Activities</a></li>
+            <li><a routerLink="">Buzz</a></li>
+          </ul>
+      </div>
+      <div class="bottom-rightSection">
+        <ul>
+          <li><a routerLink="">ListYourShow</a></li>
+          <li><a routerLink="">Corporates</a></li>
+          <li><a routerLink="">Offeres</a></li>
+          <li><a routerLink="">Gift Cards</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+</nav>

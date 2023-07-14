@@ -1,0 +1,15 @@
+<h2 class="text-center fw-bolder fs-3 mt-3 bg-danger p-3"  >All movies</h2>
+<div class="cards">
+    <div class="row d-flex" >
+      <div class="col-lg-3 col-md-4 col-sm-6 card-column" *ngFor="let movie of movies let count=index;" > 
+        <div class="cardxc" >
+          <img [src]=movie.posterUrl class="card-img-top" alt="movie poster">
+          <div class="card-body text-center"> 
+            <h3 class="card-title fw-bolder">{{movie.name}}</h3>
+            <p class="card-text">{{movie.releaseDate}}</p>
+            <a href="#" class="btn btn-dark rounded-pill">BOOK NOW</a>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>

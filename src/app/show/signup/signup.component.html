@@ -1,0 +1,49 @@
+<div class="main-layouts wrapper">
+    <h1>User SignUp Form</h1>
+    <div class="main-agileinfo">
+        <div class="agileits-top">
+            <form [formGroup]="signupForm" (ngSubmit)="signup()">
+                <input class="text" formControlName="name" type="text" name="name" placeholder="Username" required="">
+                <div class="mt-2 text-danger" *ngIf="this.signupForm.get('name')?.errors && this.signupForm.get('name')?.touched ">
+                    Invalid username
+                  </div>
+                <input class="text email" formControlName="email" type="email" name="email" placeholder="Email" required>
+                <div class="mt-1 mb-2 text-danger" *ngIf="this.signupForm.get('email')?.errors && this.signupForm.get('email')?.touched ">
+                    Invalid email
+                  </div>
+                <input class="text" formControlName="pswd" type="password" name="pswd" placeholder="password" required>
+                <div class="mt-2 text-danger" *ngIf="this.signupForm.get('pswd')?.errors && this.signupForm.get('pswd')?.touched ">
+                    Invalid password
+                  </div>
+                <input class="text w3lpass" type="password" formControlName="confirmPswd" name="confirmPswd"  placeholder="Confirm Password" required>
+                <div class="mt-1 mb-2  text-danger" *ngIf="this.signupForm.get('confirmPswd')?.errors && this.signupForm.get('confirmPswd')?.touched ">
+                    Invalid Confirm Password
+                  </div>
+                <div class="wthree-text">
+                    <label class="anim">
+                        <input type="checkbox" class="checkbox" required="">
+                        <span>I Agree To The Terms & Conditions</span>
+                    </label>
+                    <div class="clear"> </div>
+                </div>
+                <input  type="submit" value="SIGNUP">
+            </form>
+            <p>Already have an Account? <a routerLink="/signin"> Login Now!</a></p>
+        </div>
+    </div>
+    <!-- copyright -->
+ 
+    <!-- //copyright -->
+    <ul class="colorlib-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
